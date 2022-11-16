@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap-5.2.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../css/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <title>Carrito</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary" aria-label="Tenth navbar example">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08"
+                aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+                <ul class="navbar-nav">
+                    <div class="logo">
+                        <img src="/imagenes/logo-sinfondo.png" width="65" class="logo ">
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/html/productos.html"
+                            onclick="listado()">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/html/carrito.html">Carrito de compras</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-bs-toggle="dropdown"
+                            aria-expanded="false">Administración</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown08">
+                            <li><a class="dropdown-item" href="/html/agregar.html">Agregar producto</a></li>
+                            <li><a class="dropdown-item" href="/html/editar.html">Editar producto</a></li>
+                            <li><a class="dropdown-item" href="/html/eliminar.html">Eliminar producto</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <div class="carrito">
+        <table class="table">
+            <thead>
+                <tr class="text-primary">
+                    <th scope="col">#</th>
+                    <th scope="col">Productos</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                
+            </tbody>
+            <br>
+            <br>
+        </table>
+        <div class="row mx-4">
+            <div class="col">
+                <h3 class="itemCartTotal">Total: 0</h3>
+                <div class="col d-flex justify-content-end">
+                    <button class="btn btn-success">COMPRAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col d-flex justify-content-center-mb-4">
+        <div class="card shadow mb-1 rounded tarjeta">
+            <img src="${producto.Imagen}" class="card-img-top" style="width:200px">
+            <div class="card-body">
+            <h5 class="card-title">${producto.Nombre}</h5>
+            <p class="card-text">Categoria: ${producto.Categoria}</p>
+            <p class="card-text">Marca: ${producto.Marca}</p>
+            <p class="card-text precio">$${producto.Precio}</p>
+            <button class="btn btn-success button">Agregar al carrito</button>
+        </div>
+    </div>
+</body>
+
+</html>
+

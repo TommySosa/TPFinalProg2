@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap-5.2.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../css/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <title>Registro</title>
+</head>
+<body>  
+  <div class="logo-inicio">          
+    <img src="/imagenes/logo-sinfondo.png" width="150" class="logo ">  
+  </div>
+    <main class="container-fluid border border-dark shadow-lg p-3 mb-5 bg-body rounded" style="width:50rem;">
+        <form class="row g-3" id="formregistro" action="">
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="correo" placeholder="Ejemplo@gmail.com">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="contraseña">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Jorge">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress2" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="apellido" placeholder="Lamberti">
+            </div>
+            <div class="col-12">
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Registrarse</button>
+            </div>
+            <div class="col-12">
+              <a href="../html/login.html">Iniciar sesión</a>
+            </div>
+          </form>
+    </main>
+</body>
+<script src="../js/registro.js"></script>
+</html>

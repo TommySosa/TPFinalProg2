@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap-5.2.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../css/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/agregar.js"></script>
+    <title>Agregar producto</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary" aria-label="Tenth navbar example">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>   
+          <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+            <ul class="navbar-nav">
+              <div class="logo">               
+                <img src="/imagenes/logo-sinfondo.png" width="65" class="logo ">  
+            </div>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/html/productos.html" onclick="listado()">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/html/carrito.html">Carrito de compras</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-bs-toggle="dropdown" aria-expanded="false">Administración</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown08">
+                  <li><a class="dropdown-item" href="/html/agregar.html">Agregar producto</a></li>
+                  <li><a class="dropdown-item" href="/html/editar.html">Editar producto</a></li>
+                  <li><a class="dropdown-item" href="/html/eliminar.html">Eliminar producto</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container mt-5 border border-dark shadow-lg p-3 mb-5 bg-body rounded" >   
+        <form id="form-agregar">
+            <h3>Agregar producto</h3>
+            <div class="mb-3">
+              <label class="form-label">Nombre del producto</label>
+              <input type="text" class="form-control" id="nombre-producto" placeholder="Remera fachera">           
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Marca</label>
+                <input type="text" class="form-control" id="marca-producto" placeholder="Adidas">           
+              </div>
+            <div class="mb-3">
+              <label class="form-label">Precio</label>
+              <input type="number" class="form-control" id="precio-producto" placeholder="$2300">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Url de la imagen</label>
+              <input type="text" class="form-control" id="imagen-producto">
+            </div>
+            <div class="col-md-4" style="padding-bottom: 1rem;">
+                <label for="inputState" class="form-label">Categoria</label>
+                <select id="categoria-producto" class="form-select">
+                  <option selected>Elige la categoria...</option>
+                  <option>Remera</option>
+                  <option>Camisa</option>
+                  <option>Campera</option>
+                  <option>Pantalón</option>  
+                  <option>Buzo</option>    
+                </select>
+              </div>
+            <input class="btn btn-primary" type="button" onclick="agregar()" value="Agregar">
+            <input class="btn btn-primary" type="button" onclick="listado()" value="Mostrar">
+          </form>
+    </div>
+    <div class="container">
+      <section id="producto">
+          <article>
+              <h3 class="nombre"></h3>
+              <p class="marca"></p>
+              <p class="precio"></p>
+              <img src="" class="imagen">
+              <p class="categoria"></p>
+          </article>
+      </section>
+     </div>
+     
+    
+    <script src="../js/agregar.js"></script>
+</body>
+  <script src="../js/agregar.js"></script>
+</html>
